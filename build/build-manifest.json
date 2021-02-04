@@ -1,0 +1,405 @@
+{
+  "inputs": {
+    "style.css": {
+      "bytes": 1201,
+      "imports": []
+    },
+    "_snowpack/env.js": {
+      "bytes": 97,
+      "imports": []
+    },
+    "dist/App.svelte.css": {
+      "bytes": 420,
+      "imports": []
+    },
+    "_snowpack/pkg/common/index-99eba134.js": {
+      "bytes": 9539,
+      "imports": []
+    },
+    "_snowpack/pkg/svelte/internal.js": {
+      "bytes": 472,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/common/index-99eba134.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_snowpack/pkg/svelte.js": {
+      "bytes": 59,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/common/index-99eba134.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/components/Quiz.svelte.css": {
+      "bytes": 678,
+      "imports": []
+    },
+    "_snowpack/pkg/svelte/store.js": {
+      "bytes": 1785,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/common/index-99eba134.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/stores/preferencesStore.js": {
+      "bytes": 200,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/store.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/stores/historyStore.js": {
+      "bytes": 192,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/store.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/modules/random.js": {
+      "bytes": 253,
+      "imports": []
+    },
+    "dist/class/Problem.js": {
+      "bytes": 225,
+      "imports": [
+        {
+          "path": "dist/modules/random.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/problems/Addition.js": {
+      "bytes": 413,
+      "imports": [
+        {
+          "path": "dist/class/Problem.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/problems/Subtraction.js": {
+      "bytes": 419,
+      "imports": [
+        {
+          "path": "dist/class/Problem.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/problems/Multiplication.js": {
+      "bytes": 425,
+      "imports": [
+        {
+          "path": "dist/class/Problem.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/problems/Division.js": {
+      "bytes": 437,
+      "imports": [
+        {
+          "path": "dist/class/Problem.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/modules/range.js": {
+      "bytes": 105,
+      "imports": []
+    },
+    "dist/problems/Factorial.js": {
+      "bytes": 446,
+      "imports": [
+        {
+          "path": "dist/class/Problem.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/modules/range.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/problems/Percentage.js": {
+      "bytes": 485,
+      "imports": [
+        {
+          "path": "dist/class/Problem.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/problems/Exponent.js": {
+      "bytes": 644,
+      "imports": [
+        {
+          "path": "dist/class/Problem.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/modules/range.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/components/Question.svelte.css": {
+      "bytes": 775,
+      "imports": []
+    },
+    "dist/components/Question.svelte.js": {
+      "bytes": 2860,
+      "imports": [
+        {
+          "path": "dist/components/Question.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_snowpack/pkg/izitoast.js": {
+      "bytes": 36011,
+      "imports": []
+    },
+    "dist/components/Quiz.svelte.js": {
+      "bytes": 9271,
+      "imports": [
+        {
+          "path": "dist/components/Quiz.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/stores/preferencesStore.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/stores/historyStore.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/modules/random.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/problems/Addition.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/problems/Subtraction.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/problems/Multiplication.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/problems/Division.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/problems/Factorial.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/problems/Percentage.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/problems/Exponent.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/components/Question.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/izitoast.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/modules/range.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/store.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/App.svelte.js": {
+      "bytes": 2158,
+      "imports": [
+        {
+          "path": "dist/App.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/components/Quiz.svelte.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_snowpack/pkg/izitoast/dist/css/iziToast.min.css": {
+      "bytes": 41505,
+      "imports": []
+    },
+    "dist/index.js": {
+      "bytes": 458,
+      "imports": [
+        {
+          "path": "_snowpack/env.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/App.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/izitoast/dist/css/iziToast.min.css",
+          "kind": "import-statement"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "../~~bundle~~/style.css": {
+      "imports": [],
+      "inputs": {
+        "style.css": {
+          "bytesInOutput": 776
+        }
+      },
+      "bytes": 777
+    },
+    "../~~bundle~~/dist/index.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "inputs": {
+        "_snowpack/env.js": {
+          "bytesInOutput": 100
+        },
+        "dist/App.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "_snowpack/pkg/common/index-99eba134.js": {
+          "bytesInOutput": 3408
+        },
+        "_snowpack/pkg/svelte/internal.js": {
+          "bytesInOutput": 0
+        },
+        "_snowpack/pkg/svelte.js": {
+          "bytesInOutput": 0
+        },
+        "dist/components/Quiz.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "_snowpack/pkg/svelte/store.js": {
+          "bytesInOutput": 419
+        },
+        "dist/stores/preferencesStore.js": {
+          "bytesInOutput": 65
+        },
+        "dist/stores/historyStore.js": {
+          "bytesInOutput": 31
+        },
+        "dist/modules/random.js": {
+          "bytesInOutput": 83
+        },
+        "dist/class/Problem.js": {
+          "bytesInOutput": 97
+        },
+        "dist/problems/Addition.js": {
+          "bytesInOutput": 198
+        },
+        "dist/problems/Subtraction.js": {
+          "bytesInOutput": 198
+        },
+        "dist/problems/Multiplication.js": {
+          "bytesInOutput": 198
+        },
+        "dist/problems/Division.js": {
+          "bytesInOutput": 218
+        },
+        "dist/modules/range.js": {
+          "bytesInOutput": 45
+        },
+        "dist/problems/Factorial.js": {
+          "bytesInOutput": 202
+        },
+        "dist/problems/Percentage.js": {
+          "bytesInOutput": 295
+        },
+        "dist/problems/Exponent.js": {
+          "bytesInOutput": 295
+        },
+        "dist/components/Question.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "dist/components/Question.svelte.js": {
+          "bytesInOutput": 951
+        },
+        "_snowpack/pkg/izitoast.js": {
+          "bytesInOutput": 18702
+        },
+        "dist/components/Quiz.svelte.js": {
+          "bytesInOutput": 2583
+        },
+        "dist/App.svelte.js": {
+          "bytesInOutput": 737
+        },
+        "_snowpack/pkg/izitoast/dist/css/iziToast.min.css": {
+          "bytesInOutput": 0
+        },
+        "dist/index.js": {
+          "bytesInOutput": 64
+        }
+      },
+      "bytes": 29051
+    },
+    "../~~bundle~~/dist/index.css": {
+      "imports": [],
+      "inputs": {
+        "_snowpack/pkg/izitoast/dist/css/iziToast.min.css": {
+          "bytesInOutput": 41444
+        },
+        "dist/App.svelte.css": {
+          "bytesInOutput": 417
+        },
+        "dist/components/Quiz.svelte.css": {
+          "bytesInOutput": 661
+        },
+        "dist/components/Question.svelte.css": {
+          "bytesInOutput": 766
+        }
+      },
+      "bytes": 43289
+    }
+  }
+}
