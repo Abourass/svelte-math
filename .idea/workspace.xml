@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4449bf23-3432-442e-b578-b28f856603b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/build-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/dist/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Question.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Question.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Quiz.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/historyStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/historyStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +102,7 @@
       <workItem from="1612400383472" duration="1206000" />
       <workItem from="1612455202424" duration="1536000" />
       <workItem from="1612462184868" duration="12755000" />
-      <workItem from="1612478543233" duration="2323000" />
+      <workItem from="1612478543233" duration="2450000" />
     </task>
     <task id="LOCAL-00001" summary=":sparkles: Adding local site">
       <created>1612475545913</created>
@@ -123,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612480418357</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=":sparkles: Time now resets when you restart">
+      <created>1612480890739</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612480890739</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +134,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=":sparkles: Adding local site" />
     <MESSAGE value=":art: Now handles percentages correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value=":art: Now handles percentages correctly" />
+    <MESSAGE value=":sparkles: Time now resets when you restart" />
+    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: Time now resets when you restart" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
