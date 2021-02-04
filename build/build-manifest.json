@@ -70,7 +70,7 @@
       "imports": []
     },
     "dist/class/Problem.js": {
-      "bytes": 225,
+      "bytes": 209,
       "imports": [
         {
           "path": "dist/modules/random.js",
@@ -79,7 +79,7 @@
       ]
     },
     "dist/problems/Addition.js": {
-      "bytes": 413,
+      "bytes": 485,
       "imports": [
         {
           "path": "dist/class/Problem.js",
@@ -88,7 +88,7 @@
       ]
     },
     "dist/problems/Subtraction.js": {
-      "bytes": 419,
+      "bytes": 392,
       "imports": [
         {
           "path": "dist/class/Problem.js",
@@ -97,7 +97,7 @@
       ]
     },
     "dist/problems/Multiplication.js": {
-      "bytes": 425,
+      "bytes": 395,
       "imports": [
         {
           "path": "dist/class/Problem.js",
@@ -106,7 +106,7 @@
       ]
     },
     "dist/problems/Division.js": {
-      "bytes": 437,
+      "bytes": 413,
       "imports": [
         {
           "path": "dist/class/Problem.js",
@@ -119,7 +119,7 @@
       "imports": []
     },
     "dist/problems/Factorial.js": {
-      "bytes": 446,
+      "bytes": 421,
       "imports": [
         {
           "path": "dist/class/Problem.js",
@@ -132,7 +132,7 @@
       ]
     },
     "dist/problems/Percentage.js": {
-      "bytes": 485,
+      "bytes": 659,
       "imports": [
         {
           "path": "dist/class/Problem.js",
@@ -141,7 +141,7 @@
       ]
     },
     "dist/problems/Exponent.js": {
-      "bytes": 644,
+      "bytes": 620,
       "imports": [
         {
           "path": "dist/class/Problem.js",
@@ -158,7 +158,7 @@
       "imports": []
     },
     "dist/components/Question.svelte.js": {
-      "bytes": 2860,
+      "bytes": 3740,
       "imports": [
         {
           "path": "dist/components/Question.svelte.css",
@@ -175,7 +175,7 @@
       "imports": []
     },
     "dist/components/Quiz.svelte.js": {
-      "bytes": 9271,
+      "bytes": 9413,
       "imports": [
         {
           "path": "dist/components/Quiz.svelte.css",
@@ -309,7 +309,7 @@
           "bytesInOutput": 0
         },
         "_snowpack/pkg/common/index-99eba134.js": {
-          "bytesInOutput": 3408
+          "bytesInOutput": 3407
         },
         "_snowpack/pkg/svelte/internal.js": {
           "bytesInOutput": 0
@@ -321,7 +321,7 @@
           "bytesInOutput": 0
         },
         "_snowpack/pkg/svelte/store.js": {
-          "bytesInOutput": 419
+          "bytesInOutput": 426
         },
         "dist/stores/preferencesStore.js": {
           "bytesInOutput": 65
@@ -354,7 +354,7 @@
           "bytesInOutput": 202
         },
         "dist/problems/Percentage.js": {
-          "bytesInOutput": 295
+          "bytesInOutput": 354
         },
         "dist/problems/Exponent.js": {
           "bytesInOutput": 295
@@ -363,16 +363,16 @@
           "bytesInOutput": 0
         },
         "dist/components/Question.svelte.js": {
-          "bytesInOutput": 951
+          "bytesInOutput": 1228
         },
         "_snowpack/pkg/izitoast.js": {
           "bytesInOutput": 18702
         },
         "dist/components/Quiz.svelte.js": {
-          "bytesInOutput": 2583
+          "bytesInOutput": 2693
         },
         "dist/App.svelte.js": {
-          "bytesInOutput": 737
+          "bytesInOutput": 736
         },
         "_snowpack/pkg/izitoast/dist/css/iziToast.min.css": {
           "bytesInOutput": 0
@@ -381,7 +381,7 @@
           "bytesInOutput": 64
         }
       },
-      "bytes": 29051
+      "bytes": 29502
     },
     "../~~bundle~~/dist/index.css": {
       "imports": [],

@@ -1,7 +1,7 @@
 import Problem, {iProblem} from '../class/Problem';
 import range from '../modules/range';
 
-export class FactorialProblem extends Problem {
+export default class FactorialProblem extends Problem {
   constructor() {
     super();
   }
@@ -13,5 +13,3 @@ export class FactorialProblem extends Problem {
     return {question: this.question, answer: this.answer}
   }
 }
-
-export default FactorialProblem

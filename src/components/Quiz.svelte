@@ -64,7 +64,7 @@
           break;
         }
         case "p": {
-          mathProblems.push(new PercentageProblem().mathFn(10, 10));
+          mathProblems.push(new PercentageProblem().mathFn());
           break;
         }
         case "e": {
@@ -169,17 +169,18 @@
 <svelte:window on:keydown={handleKeyboardCommands}/>
 
 {#if $triesLeft >= 1}
-<Question
-  question={$problems[0].question}
-  answer={$problems[0].answer}
-  userAnswer={userAnswer}
-  tries={triesLeft}
-/>
-  {:else}
+  <Question
+    question={$problems[0].question}
+    answer={$problems[0].answer}
+    userAnswer={userAnswer}
+    tries={triesLeft}
+    answerSymbol={$problems[0]?.symbol}
+  />
+{:else}
   <div>
     <h3>Sorry No More Tries Left</h3>
     <div class="btn-wrapper">
       <button on:click={restart} class="btn">Try Again</button>
     </div>
   </div>
-  {/if}
+{/if}

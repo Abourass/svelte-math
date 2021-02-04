@@ -1,19 +1,25 @@
 import Problem, {iProblem} from '../class/Problem';
 
-export class PercentageProblem extends Problem {
+export default class PercentageProblem extends Problem {
+  private readonly answerSymbol: string;
   constructor() {
     super();
+    this.answerSymbol = "%"
   }
 
-  mathFn(maxA: number = 9, maxB: number = 99): iProblem {
+  mathFn(maxA: number = 9, maxB: number = 100): iProblem {
     let a: number = this.random(maxA);
     let b: number = this.random(maxB);
 
-    this.answer = Math.round(((a / b) * 100) * 1000) / 1000; //round to 3 decimals
-    this.answer = `${this.answer}%`;
-    this.question = `What percentage of ${b} is the number ${a}? (__%)`;
-    return {question: this.question, answer: this.answer}
+    function percentage(partialValue: number, totalValue: number): number {
+      const percent =  (100 * partialValue) / totalValue;
+
+      if (percent.toString().length > 2) return Number(percent.toFixed(2))
+      return percent
+    }
+
+    this.answer = percentage(a, b); //round to hundredths
+    this.question = `${a} is what percent of ${b}?`;
+    return {question: this.question, answer: this.answer, symbol: this.answerSymbol}
   }
 }
-
-export default PercentageProblem

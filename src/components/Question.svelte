@@ -3,12 +3,7 @@
   export let question: string
   export let answer: number|string;
   export let userAnswer;
-
-  let triesUsed = 0;
-
-  const checkAnswer = (ev): void => {
-    console.log(ev)
-  }
+  export let answerSymbol: string
 </script>
 
 <style>
@@ -61,6 +56,9 @@
     <span class="question">{question}</span>
     <span>&nbsp;=&nbsp;</span>
     <input class="answer" type="text" bind:value={$userAnswer} />
+    {#if answerSymbol}
+      {answerSymbol}
+    {/if}
   </div>
 
 </div>

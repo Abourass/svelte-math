@@ -1,8 +1,12 @@
 import {getRandomInt} from '../modules/random';
 
-export interface iProblem {question: string, answer: number|string}
+export interface iProblem {
+  question: string,
+  answer: number,
+  symbol?: string
+}
 
-export abstract class Problem {
+export default abstract class Problem {
   answer?: number|string;
   question?: string;
   protected random: (max: number) => number;
@@ -13,4 +17,3 @@ export abstract class Problem {
     this.random = (max: number) => getRandomInt(1, max)
   }
 }
-export default Problem;

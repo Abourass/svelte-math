@@ -1,7 +1,7 @@
 import Problem, {iProblem} from '../class/Problem';
 import range from '../modules/range';
 
-export class ExponentProblem extends Problem {
+export default class ExponentProblem extends Problem {
   constructor() {
     super();
   }
@@ -18,5 +18,3 @@ export class ExponentProblem extends Problem {
     return {question: this.question, answer: this.answer}
   }
 }
-
-export default ExponentProblem

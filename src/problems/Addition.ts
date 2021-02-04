@@ -1,6 +1,6 @@
 import Problem, {iProblem} from '../class/Problem';
 
-export class AdditionProblem extends Problem {
+export default class AdditionProblem extends Problem {
   constructor() {
     super();
   }
@@ -15,4 +15,11 @@ export class AdditionProblem extends Problem {
   }
 }
 
-export default AdditionProblem
+
+export class EasyAdditionProblem extends AdditionProblem {
+  constructor() {
+    super();
+  }
+
+
+}

@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4449bf23-3432-442e-b578-b28f856603b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quiz.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/build-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/Problem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Problem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Question.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Question.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Quiz.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problems/Addition.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/problems/Addition.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problems/Division.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/problems/Division.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problems/Exponent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/problems/Exponent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problems/Factorial.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/problems/Factorial.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problems/Multiplication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/problems/Multiplication.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problems/Percentage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/problems/Percentage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problems/Subtraction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/problems/Subtraction.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +70,7 @@
       <recent name="C:\Users\Navi\WebstormProjects\svelte-math\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.start">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -82,8 +93,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -101,12 +112,25 @@
       <workItem from="1612390244663" duration="2362000" />
       <workItem from="1612400383472" duration="1206000" />
       <workItem from="1612455202424" duration="1536000" />
-      <workItem from="1612462184868" duration="12128000" />
+      <workItem from="1612462184868" duration="12755000" />
+      <workItem from="1612478543233" duration="1851000" />
     </task>
+    <task id="LOCAL-00001" summary=":sparkles: Adding local site">
+      <created>1612475545913</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612475545913</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=":sparkles: Adding local site" />
+    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: Adding local site" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
