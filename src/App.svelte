@@ -1,11 +1,10 @@
 <script lang='typescript'>
   import {onMount} from 'svelte';
   import Quiz from './components/Quiz.svelte';
-
-  let count: number = 0;
+  import {time} from './stores/historyStore';
 
   onMount(() => {
-    const interval = setInterval(() => count++, 1000);
+    const interval = setInterval(() => time.update(t => t + 1), 1000);
     return () => {
       clearInterval(interval);
     };
@@ -41,10 +40,10 @@
 
 <div class="App">
   <header class="App-header">
-    <Quiz />
+    <Quiz time={time} />
   </header>
 
   <footer>
-    <p>Page has been open for <code>{count}</code> seconds.</p>
+    <p><code>{$time}</code></p>
   </footer>
 </div>

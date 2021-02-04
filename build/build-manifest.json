@@ -12,7 +12,7 @@
       "bytes": 420,
       "imports": []
     },
-    "_snowpack/pkg/common/index-99eba134.js": {
+    "_snowpack/pkg/common/index-8f961824.js": {
       "bytes": 9539,
       "imports": []
     },
@@ -20,7 +20,7 @@
       "bytes": 472,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-99eba134.js",
+          "path": "_snowpack/pkg/common/index-8f961824.js",
           "kind": "import-statement"
         }
       ]
@@ -29,7 +29,7 @@
       "bytes": 59,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-99eba134.js",
+          "path": "_snowpack/pkg/common/index-8f961824.js",
           "kind": "import-statement"
         }
       ]
@@ -42,7 +42,7 @@
       "bytes": 1785,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-99eba134.js",
+          "path": "_snowpack/pkg/common/index-8f961824.js",
           "kind": "import-statement"
         }
       ]
@@ -57,7 +57,7 @@
       ]
     },
     "dist/stores/historyStore.js": {
-      "bytes": 192,
+      "bytes": 225,
       "imports": [
         {
           "path": "_snowpack/pkg/svelte/store.js",
@@ -175,7 +175,7 @@
       "imports": []
     },
     "dist/components/Quiz.svelte.js": {
-      "bytes": 9413,
+      "bytes": 9864,
       "imports": [
         {
           "path": "dist/components/Quiz.svelte.css",
@@ -244,7 +244,7 @@
       ]
     },
     "dist/App.svelte.js": {
-      "bytes": 2158,
+      "bytes": 2193,
       "imports": [
         {
           "path": "dist/App.svelte.css",
@@ -260,6 +260,10 @@
         },
         {
           "path": "dist/components/Quiz.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/stores/historyStore.js",
           "kind": "import-statement"
         }
       ]
@@ -308,8 +312,8 @@
         "dist/App.svelte.css": {
           "bytesInOutput": 0
         },
-        "_snowpack/pkg/common/index-99eba134.js": {
-          "bytesInOutput": 3407
+        "_snowpack/pkg/common/index-8f961824.js": {
+          "bytesInOutput": 3405
         },
         "_snowpack/pkg/svelte/internal.js": {
           "bytesInOutput": 0
@@ -327,7 +331,7 @@
           "bytesInOutput": 65
         },
         "dist/stores/historyStore.js": {
-          "bytesInOutput": 31
+          "bytesInOutput": 39
         },
         "dist/modules/random.js": {
           "bytesInOutput": 83
@@ -363,16 +367,16 @@
           "bytesInOutput": 0
         },
         "dist/components/Question.svelte.js": {
-          "bytesInOutput": 1228
+          "bytesInOutput": 1227
         },
         "_snowpack/pkg/izitoast.js": {
-          "bytesInOutput": 18702
+          "bytesInOutput": 18704
         },
         "dist/components/Quiz.svelte.js": {
-          "bytesInOutput": 2693
+          "bytesInOutput": 2837
         },
         "dist/App.svelte.js": {
-          "bytesInOutput": 736
+          "bytesInOutput": 710
         },
         "_snowpack/pkg/izitoast/dist/css/iziToast.min.css": {
           "bytesInOutput": 0
@@ -381,7 +385,7 @@
           "bytesInOutput": 64
         }
       },
-      "bytes": 29502
+      "bytes": 29627
     },
     "../~~bundle~~/dist/index.css": {
       "imports": [],

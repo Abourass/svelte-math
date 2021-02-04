@@ -33,6 +33,7 @@
   export let totalQuestions = 10;
   export let triesPerQuestion = 3;
   export let difficulty = 'easy';
+  export let time;
 
   const triesLeft = writable(triesPerQuestion);
 
@@ -107,9 +108,9 @@
           triesLeft.update(n => n - 1);
           console.log($userAnswer)
         }
-      } else {
-
       }
+    } else {
+      restart();
     }
   }
 
@@ -118,10 +119,10 @@
     $triesLeft = triesPerQuestion;
     $questionsWrong = 0;
     $questionsCorrect = 0;
+    $time = 0;
   }
 
   $problems = [...generateProblems()];
-
 </script>
 
 

@@ -60,5 +60,4 @@
       {answerSymbol}
     {/if}
   </div>
-
 </div>
