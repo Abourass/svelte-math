@@ -1,15 +1,17 @@
-import Problem, {iProblem} from '../class/Problem';
+import Problem, {difficulty, iProblem} from '../class/Problem';
 
 export default class DivisionProblem extends Problem {
   constructor() {
     super();
   }
 
-  mathFn(maxForA: number, maxForB: number): iProblem {
-    const digitA: number = this.random(maxForA);
-    const digitB: number = this.random(maxForB)
+  mathFn(difficultyLevel: difficulty): iProblem {
+    const {digitA, digitB} = this.chooseDigits(difficultyLevel)
 
-    this.answer = Math.round((digitA / digitB) * 1000) / 1000;
+    const result = digitA / digitB
+    this.answer = (result.toString().length > 2)
+      ? Number(result.toFixed(2))
+      : result;
     this.question = `${digitA} / ${digitB}`;
     return {question: this.question, answer: this.answer}
   }

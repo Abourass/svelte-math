@@ -1,13 +1,12 @@
-import Problem, {iProblem} from '../class/Problem';
+import Problem, {difficulty, iProblem} from '../class/Problem';
 
 export default class AdditionProblem extends Problem {
   constructor() {
     super();
   }
 
-  mathFn(maxForA: number, maxForB: number): iProblem {
-    const digitA: number = this.random(maxForA);
-    const digitB: number = this.random(maxForB)
+  mathFn(difficultyLevel: difficulty): iProblem {
+    const {digitA, digitB} = this.chooseDigits(difficultyLevel)
 
     this.answer = digitA + digitB;
     this.question = `${digitA} + ${digitB}`;
@@ -15,11 +14,3 @@ export default class AdditionProblem extends Problem {
   }
 }
 
-
-export class EasyAdditionProblem extends AdditionProblem {
-  constructor() {
-    super();
-  }
-
-
-}

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type {iProblem} from '../class/Problem';
+  import type {difficulty, iProblem} from '../class/Problem';
   import {userAnswer, questionsCorrect, questionsWrong, completedQuestions} from '../stores/historyStore';
   import {problemCategories, problems} from '../stores/preferencesStore';
   import {getRandomInt} from '../modules/random';
@@ -17,7 +17,7 @@
   // Props
   export let totalQuestions = 10;
   export let triesPerQuestion = 3;
-  export let difficulty = 'easy';
+  export let difficulty: difficulty = 'easy';
   export let time;
 
   // Variables
@@ -32,27 +32,27 @@
 
       switch (category) {
         case "a": {
-          mathProblems.push(new AdditionProblem().mathFn(10, 10));
+          mathProblems.push(new AdditionProblem().mathFn(difficulty));
           break;
         }
         case "s": {
-          mathProblems.push(new SubtractionProblem().mathFn(10, 10));
+          mathProblems.push(new SubtractionProblem().mathFn(difficulty));
           break;
         }
         case "m": {
-          mathProblems.push(new MultiplicationProblem().mathFn(10, 10));
+          mathProblems.push(new MultiplicationProblem().mathFn(difficulty));
           break;
         }
         case "d": {
-          mathProblems.push(new DivisionProblem().mathFn(10, 10));
+          mathProblems.push(new DivisionProblem().mathFn(difficulty));
+          break;
+        }
+        case "p": {
+          mathProblems.push(new PercentageProblem().mathFn(difficulty));
           break;
         }
         case "f": {
           mathProblems.push(new FactorialProblem().mathFn());
-          break;
-        }
-        case "p": {
-          mathProblems.push(new PercentageProblem().mathFn());
           break;
         }
         case "e": {
@@ -62,6 +62,7 @@
       }
     }
 
+    console.log({mathProblems})
     return mathProblems;
   }
 
