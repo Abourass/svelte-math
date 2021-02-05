@@ -1,72 +1,31 @@
 <script lang="ts">
-  import type {difficulty, iProblem} from '../class/Problem';
+  import type {questionDifficulty} from '../class/Problem';
   import {userAnswer, questionsCorrect, questionsWrong, completedQuestions} from '../stores/historyStore';
   import {problemCategories, problems} from '../stores/preferencesStore';
   import range from '../modules/range'
-  import {getRandomInt} from '../modules/random';
-  import AdditionProblem from '../problems/Addition';
-  import SubtractionProblem from '../problems/Subtraction';
-  import MultiplicationProblem from '../problems/Multiplication';
-  import DivisionProblem from '../problems/Division';
-  import FactorialProblem from '../problems/Factorial';
-  import PercentageProblem from '../problems/Percentage';
-  import ExponentProblem from '../problems/Exponent';
   import Question from './Question.svelte';
   import iziToast from 'izitoast';
   import {writable} from 'svelte/store';
+  import problemGenerator from '../modules/problemGenerator';
 
   // Props
   export let totalQuestions = 10;
   export let triesPerQuestion = 3;
-  export let difficulty: difficulty = 'easy';
+  export let difficulty: questionDifficulty = 'easy';
   export let time;
 
   // Variables
   const triesLeft = writable(triesPerQuestion);
 
-  // Quiz Functions
-  const generateProblems = (): Array<iProblem> => {
-    const mathProblems = [];
-
-    for (let i = 0; i < totalQuestions; i++) {
-      const category = $problemCategories[getRandomInt(0, $problemCategories.length - 1)];
-
-      switch (category) {
-        case "a": {
-          mathProblems.push(new AdditionProblem().mathFn(difficulty));
-          break;
-        }
-        case "s": {
-          mathProblems.push(new SubtractionProblem().mathFn(difficulty));
-          break;
-        }
-        case "m": {
-          mathProblems.push(new MultiplicationProblem().mathFn(difficulty));
-          break;
-        }
-        case "d": {
-          mathProblems.push(new DivisionProblem().mathFn(difficulty));
-          break;
-        }
-        case "p": {
-          mathProblems.push(new PercentageProblem().mathFn(difficulty));
-          break;
-        }
-        case "f": {
-          mathProblems.push(new FactorialProblem().mathFn());
-          break;
-        }
-        case "e": {
-          mathProblems.push(new ExponentProblem().mathFn());
-          break;
-        }
-      }
-    }
-
-    console.log({mathProblems})
-    return mathProblems;
+  const restart = () => {
+    $problems = [...problemGenerator(totalQuestions, $problemCategories, difficulty, true)];
+    $triesLeft = triesPerQuestion;
+    $questionsWrong = 0;
+    $questionsCorrect = 0;
+    $time = 0;
   }
 
+  // Quiz Functions
   const wrong = () => {
     iziToast.error({
       title: 'Incorrect',
@@ -117,16 +76,8 @@
     }
   }
 
-  const restart = () => {
-    $problems = [...generateProblems()];
-    $triesLeft = triesPerQuestion;
-    $questionsWrong = 0;
-    $questionsCorrect = 0;
-    $time = 0;
-  }
-
   // Launch Action
-  $problems = [...generateProblems()];
+  $problems = [...problemGenerator(totalQuestions, $problemCategories, difficulty, true)];
 </script>
 
 
@@ -145,44 +96,6 @@
     box-shadow:  20px 20px 45px #0f476d, -20px -20px 45px #156193;
   }
 
-  .btn {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #185c8a;
-    transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0px -6px 10px #3675a0, 0px 4px 15px rgb(0 0 0 / 15%);
-    cursor: pointer;
-    color: #c3c3c3;
-    font-weight: 600;
-  }
-  .btn:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    z-index: 2;
-  }
-  .btn:active {
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.02);
-  }
-  .btn:active:after {
-    box-shadow: inset 0px -2px 5px #3675a0, inset 0px 2px 5px rgba(0, 0, 0, 0.15);
-  }
-  button {
-    border: 0;
-  }
-
-  button:focus {
-    border: none;
-    outline: 0 !important;
-    outline-style: none;
-  }
-
   .try-indicator {
     border-radius: 150px;
     background: linear-gradient(145deg, #104c73, #135a89);
@@ -192,38 +105,47 @@
     margin-right: .5rem;
   }
 
-  .row {
+  .column {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
   }
 </style>
 
 <svelte:window on:keydown={handleKeyboardCommands}/>
 
 <div class="card">
-  {#if $triesLeft >= 1}
-    <div class="row">
-      {#each [...range(1, $triesLeft)].sort((a, b) => b - a) as life}
-        <div class="try-indicator"><span>&nbsp;</span></div>
-      {/each}
-    </div>
-    <Question
-      question={$problems[0].question}
-      answer={$problems[0].answer}
-      userAnswer={userAnswer}
-      answerSymbol={$problems[0]?.symbol}
-    />
-    <div>
-      {$completedQuestions.length + 1} / {totalQuestions}
-    </div>
+  {#if $completedQuestions.length === totalQuestions}
+    <h3>Congratulations</h3>
+    {#each $totalQuestions as problem}
+        <div class="column">
+          <span>Problem: {problem.question}</span>
+          <span>Answer: {problem.answer}</span>
+          <span>Tries: {problem.tries}</span>
+        </div>
+    {/each}
   {:else}
-    <div>
-      <h3>Sorry No More Tries Left</h3>
-      <div class="btn-wrapper">
+    {#if $triesLeft >= 1}
+      <div class="row">
+        {#each [...range(1, $triesLeft)].sort((a, b) => b - a) as life}
+          <div class="try-indicator"><span>&nbsp;</span></div>
+        {/each}
+      </div>
+      <Question
+        question={$problems[0].question}
+        answer={$problems[0].answer}
+        userAnswer={userAnswer}
+        answerSymbol={$problems[0]?.symbol}
+      />
+      <div>
+        {$completedQuestions.length + 1} / {totalQuestions}
+      </div>
+    {:else}
+      <div>
+        <h3>Sorry No More Tries Left</h3>
         <button on:click={restart} class="btn">Try Again</button>
       </div>
-    </div>
+    {/if}
   {/if}
+
 </div>
 

@@ -12,56 +12,51 @@ p {
     justify-content: space-evenly;
 }
 
-.button {
-    border: 1px solid #306990;
-    outline: none;
-    border-radius: 30px;
-    padding: 7px 0;
-    font-size: 20px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    /* background: #1ab188; */
-    background: #1e3748;/*#4e617e;#576d8e;#61799e;*/
-    color: #ffffff;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    -webkit-appearance: none;
-}
-.button:hover, .button:focus {
-  background: #179b77;
-}
-.button-block {
-    display: block;
-    width: 40%;
+.btn {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #185c8a;
+  transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0px -6px 10px #3675a0, 0px 4px 15px rgb(0 0 0 / 15%);
+  cursor: pointer;
+  color: #c3c3c3;
+  font-weight: 600;
 }
 
-#overview {
-  text-align: left;
-  font-size: 0.4em;
-  /* margin-top: 40px; */
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 2;
 }
-#response {
-    font-size: 0.9em;
+.btn:active {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.02);
 }
-.red {
-  color: #e55659;
+.btn:active:after {
+  box-shadow: inset 0px -2px 5px #3675a0, inset 0px 2px 5px rgba(0, 0, 0, 0.15);
 }
-.green {
-  color: #08f908;
-  font-weight: bold;
+button {
+  border: 0;
 }
-.settings {
-  text-align: right;
+
+button:focus {
+  border: none;
+  outline: 0 !important;
+  outline-style: none;
 }
-#settings {
-  font-size: 1.4em;
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-#settings:hover {
-  color: #1ab188;
-  /* line-height: 20em; */
-  font-size: 1.5em;
-}
+
 h1 {
   text-align: center;
   font-size: 4em;

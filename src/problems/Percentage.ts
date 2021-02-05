@@ -1,4 +1,4 @@
-import Problem, {difficulty, iProblem} from '../class/Problem';
+import Problem, {questionDifficulty, iProblem} from '../class/Problem';
 
 export default class PercentageProblem extends Problem {
   private readonly answerSymbol: string;
@@ -7,7 +7,7 @@ export default class PercentageProblem extends Problem {
     this.answerSymbol = "%"
   }
 
-  mathFn(difficultyLevel: difficulty): iProblem {
+  mathFn(difficultyLevel: questionDifficulty): iProblem {
     const {digitA, digitB} = this.chooseDigits(difficultyLevel)
 
     function percentage(partialValue: number, totalValue: number): number {

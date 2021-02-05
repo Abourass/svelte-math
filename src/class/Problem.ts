@@ -11,7 +11,7 @@ export interface digits {
   digitB: number
 }
 
-export type difficulty = 'easy'|'medium'|'hard'
+export type questionDifficulty = 'easy'|'medium'|'hard'
 
 export default abstract class Problem {
   answer?: number|string;
@@ -36,7 +36,7 @@ export default abstract class Problem {
     return {digitA: this.random(maxA), digitB: this.random(maxB)}
   }
 
-  chooseDigits(difficultyLevel: difficulty): digits {
+  chooseDigits(difficultyLevel: questionDifficulty): digits {
     if (difficultyLevel === 'easy') return this.easyDigits();
     if (difficultyLevel === 'medium') return this.mediumDigits();
     return this.hardDigits();
