@@ -12,7 +12,7 @@ export default class PercentageProblem extends Problem {
     let b: number = this.random(maxB);
 
     function percentage(partialValue: number, totalValue: number): number {
-      const percent =  (100 * partialValue) / totalValue;
+      const percent: number =  (100 * partialValue) / totalValue;
 
       if (percent.toString().length > 2) return Number(percent.toFixed(2))
       return percent

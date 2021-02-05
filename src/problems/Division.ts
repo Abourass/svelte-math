@@ -6,8 +6,8 @@ export default class DivisionProblem extends Problem {
   }
 
   mathFn(maxForA: number, maxForB: number): iProblem {
-    const digitA = this.random(maxForA);
-    const digitB = this.random(maxForB)
+    const digitA: number = this.random(maxForA);
+    const digitB: number = this.random(maxForB)
 
     this.answer = Math.round((digitA / digitB) * 1000) / 1000;
     this.question = `${digitA} / ${digitB}`;

@@ -7,20 +7,6 @@
 </script>
 
 <style>
-  .card {
-    max-width: 600px;
-    margin: 50px auto 40px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 1%;
-    border-radius: 50px;
-    background: linear-gradient(145deg, #104c73, #135a89);
-    box-shadow:  20px 20px 45px #0f476d, -20px -20px 45px #156193;
-  }
-
   .row {
     font-size: 3rem;
     margin-top: 2rem;
@@ -51,13 +37,13 @@
   .answer:focus { outline: 0; }
 </style>
 
-<div class="card">
-  <div class="row">
-    <span class="question">{question}</span>
-    <span>&nbsp;=&nbsp;</span>
-    <input class="answer" type="text" bind:value={$userAnswer} />
-    {#if answerSymbol}
-      {answerSymbol}
-    {/if}
-  </div>
+
+<div class="row">
+  <span class="question">{question}</span>
+  <span>&nbsp;=&nbsp;</span>
+  <input class="answer" type="text" bind:value={$userAnswer} />
+  {#if answerSymbol}
+    {answerSymbol}
+  {/if}
 </div>
+

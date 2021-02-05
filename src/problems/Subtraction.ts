@@ -6,8 +6,8 @@ export default class SubtractionProblem extends Problem {
   }
 
   mathFn(maxForA: number, maxForB: number): iProblem {
-    const digitA = this.random(maxForA);
-    const digitB = this.random(maxForB)
+    const digitA: number = this.random(maxForA);
+    const digitB: number = this.random(maxForB)
 
     this.answer = digitA - digitB;
     this.question = `${digitA} - ${digitB}`;

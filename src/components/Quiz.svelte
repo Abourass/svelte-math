@@ -1,8 +1,7 @@
 <script lang="ts">
   import type {iProblem} from '../class/Problem';
-  import type {QuestionAbbreviations} from '../stores/preferencesStore'
+  import {userAnswer, questionsCorrect, questionsWrong, completedQuestions} from '../stores/historyStore';
   import {problemCategories, problems} from '../stores/preferencesStore';
-  import {userAnswer, questionsCorrect, questionsWrong} from '../stores/historyStore';
   import {getRandomInt} from '../modules/random';
   import AdditionProblem from '../problems/Addition';
   import SubtractionProblem from '../problems/Subtraction';
@@ -13,21 +12,7 @@
   import ExponentProblem from '../problems/Exponent';
   import Question from './Question.svelte';
   import iziToast from 'izitoast';
-
-  import range from '../modules/range';
   import {writable} from 'svelte/store';
-
-  const ZeroThroughTen: Array<number> = [...range(0, 10)];
-
-  // Quiz Functions
-  function addCategory(categories: Array<QuestionAbbreviations>): void;
-  function addCategory(category: QuestionAbbreviations) {
-    if (Array.isArray(category)) {
-      $problemCategories = [...$problemCategories, ...category]
-    } else {
-      $problemCategories = [...$problemCategories, category]
-    }
-  }
 
   // Props
   export let totalQuestions = 10;
@@ -35,8 +20,10 @@
   export let difficulty = 'easy';
   export let time;
 
+  // Variables
   const triesLeft = writable(triesPerQuestion);
 
+  // Quiz Functions
   const generateProblems = (): Array<iProblem> => {
     const mathProblems = [];
 
@@ -61,7 +48,7 @@
           break;
         }
         case "f": {
-          mathProblems.push(new FactorialProblem().mathFn(getRandomInt(1, 10)));
+          mathProblems.push(new FactorialProblem().mathFn());
           break;
         }
         case "p": {
@@ -75,8 +62,33 @@
       }
     }
 
-    console.log(mathProblems)
+    console.log({mathProblems}, mathProblems.length)
     return mathProblems;
+  }
+
+  const wrong = () => {
+    iziToast.error({
+      title: 'Incorrect',
+      message: 'Try Again',
+      position: 'topRight'
+    });
+
+    questionsWrong.update(n => n + 1);
+    triesLeft.update(n => n - 1);
+  }
+
+  const correct = () => {
+    iziToast.success({
+      title: 'Correct',
+      message: 'Great Job!',
+      position: 'topRight'
+    })
+
+    $completedQuestions = [...$completedQuestions, $problems[0]]
+    $problems = [...$problems.slice(1)]
+    $userAnswer = null
+    questionsCorrect.update(n => n + 1);
+    $triesLeft = triesPerQuestion
   }
 
   const handleKeyboardCommands = (ev) => {
@@ -85,32 +97,13 @@
     if (key === 'Enter'){
       if ($triesLeft >= 1){
         if (Number($userAnswer) === $problems[0].answer){
-          console.log(true);
-          iziToast.success({
-            title: 'Correct',
-            message: 'Great Job!',
-            position: 'topRight'
-          })
-
-          $problems = [...$problems.slice(1)]
-          $userAnswer = null
-          questionsCorrect.update(n => n + 1);
-          $triesLeft = triesPerQuestion
+          correct();
         } else {
-          console.log('false');
-          iziToast.error({
-            title: 'Incorrect',
-            message: 'Try Again',
-            position: 'topRight'
-          });
-
-          questionsWrong.update(n => n + 1);
-          triesLeft.update(n => n - 1);
-          console.log($userAnswer)
+          wrong()
         }
+      } else {
+        restart();
       }
-    } else {
-      restart();
     }
   }
 
@@ -122,11 +115,26 @@
     $time = 0;
   }
 
+  // Launch Action
   $problems = [...generateProblems()];
 </script>
 
 
 <style>
+  .card {
+    max-width: 600px;
+    margin: 50px auto 40px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 1%;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #104c73, #135a89);
+    box-shadow:  20px 20px 45px #0f476d, -20px -20px 45px #156193;
+  }
+
   .btn {
     position: relative;
     width: 80px;
@@ -169,19 +177,24 @@
 
 <svelte:window on:keydown={handleKeyboardCommands}/>
 
-{#if $triesLeft >= 1}
-  <Question
-    question={$problems[0].question}
-    answer={$problems[0].answer}
-    userAnswer={userAnswer}
-    tries={triesLeft}
-    answerSymbol={$problems[0]?.symbol}
-  />
-{:else}
-  <div>
-    <h3>Sorry No More Tries Left</h3>
-    <div class="btn-wrapper">
-      <button on:click={restart} class="btn">Try Again</button>
+<div class="card">
+  {#if $triesLeft >= 1}
+    <Question
+      question={$problems[0].question}
+      answer={$problems[0].answer}
+      userAnswer={userAnswer}
+      answerSymbol={$problems[0]?.symbol}
+    />
+    <div>
+      {$completedQuestions.length + 1} / {totalQuestions}
     </div>
-  </div>
-{/if}
+  {:else}
+    <div>
+      <h3>Sorry No More Tries Left</h3>
+      <div class="btn-wrapper">
+        <button on:click={restart} class="btn">Try Again</button>
+      </div>
+    </div>
+  {/if}
+</div>
+
