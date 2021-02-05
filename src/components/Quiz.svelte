@@ -84,11 +84,20 @@
       position: 'topRight'
     })
 
-    $completedQuestions = [...$completedQuestions, $problems[0]]
+    const saveQuestion = () => ({
+      question: $problems[0].question,
+      answer: $problems[0].answer,
+      tries: (triesPerQuestion - $triesLeft) + 1,
+      timeStamp: $time,
+    })
+
+    $completedQuestions = [...$completedQuestions, saveQuestion()]
     $problems = [...$problems.slice(1)]
     $userAnswer = null
     questionsCorrect.update(n => n + 1);
     $triesLeft = triesPerQuestion
+
+    console.log({$completedQuestions})
   }
 
   const handleKeyboardCommands = (ev) => {
@@ -179,15 +188,15 @@
 
 <div class="card">
   {#if $triesLeft >= 1}
+    <div>
+      {$completedQuestions.length + 1} / {totalQuestions}
+    </div>
     <Question
       question={$problems[0].question}
       answer={$problems[0].answer}
       userAnswer={userAnswer}
       answerSymbol={$problems[0]?.symbol}
     />
-    <div>
-      {$completedQuestions.length + 1} / {totalQuestions}
-    </div>
   {:else}
     <div>
       <h3>Sorry No More Tries Left</h3>
