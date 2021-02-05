@@ -28,7 +28,7 @@
     const mathProblems = [];
 
     for (let i = 0; i < totalQuestions; i++) {
-      const category = $problemCategories[getRandomInt(0, $problemCategories.length)];
+      const category = $problemCategories[getRandomInt(0, $problemCategories.length - 1)];
 
       switch (category) {
         case "a": {
@@ -62,7 +62,6 @@
       }
     }
 
-    console.log({mathProblems}, mathProblems.length)
     return mathProblems;
   }
 
