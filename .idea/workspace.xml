@@ -4,6 +4,7 @@
     <list default="true" id="4449bf23-3432-442e-b578-b28f856603b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/build-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/dist/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/dist/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/dist/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Quiz.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz.svelte" afterDir="false" />
@@ -104,7 +105,7 @@
       <workItem from="1612400383472" duration="1206000" />
       <workItem from="1612455202424" duration="1536000" />
       <workItem from="1612462184868" duration="12755000" />
-      <workItem from="1612478543233" duration="6608000" />
+      <workItem from="1612478543233" duration="7621000" />
     </task>
     <task id="LOCAL-00001" summary=":sparkles: Adding local site">
       <created>1612475545913</created>
@@ -155,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612484784883</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=":art: We now track tries per question / time spent per question">
+      <created>1612485527894</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612485527894</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +177,8 @@
     <MESSAGE value=":art: Now shows you how far you are" />
     <MESSAGE value=":bug: Fixed off by one error in the quiz total questions generation" />
     <MESSAGE value=":art: Whole system now handles a difficulty value being assigned" />
-    <option name="LAST_COMMIT_MESSAGE" value=":art: Whole system now handles a difficulty value being assigned" />
+    <MESSAGE value=":art: We now track tries per question / time spent per question" />
+    <option name="LAST_COMMIT_MESSAGE" value=":art: We now track tries per question / time spent per question" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

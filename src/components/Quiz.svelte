@@ -2,6 +2,7 @@
   import type {difficulty, iProblem} from '../class/Problem';
   import {userAnswer, questionsCorrect, questionsWrong, completedQuestions} from '../stores/historyStore';
   import {problemCategories, problems} from '../stores/preferencesStore';
+  import range from '../modules/range'
   import {getRandomInt} from '../modules/random';
   import AdditionProblem from '../problems/Addition';
   import SubtractionProblem from '../problems/Subtraction';
@@ -182,14 +183,30 @@
     outline-style: none;
   }
 
+  .try-indicator {
+    border-radius: 150px;
+    background: linear-gradient(145deg, #104c73, #135a89);
+    box-shadow:  5px 5px 10px #0f476d, -5px -5px 10px #156193;
+    width: 2.2rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 </style>
 
 <svelte:window on:keydown={handleKeyboardCommands}/>
 
 <div class="card">
   {#if $triesLeft >= 1}
-    <div>
-      {$completedQuestions.length + 1} / {totalQuestions}
+    <div class="row">
+      {#each [...range(1, $triesLeft)].sort((a, b) => b - a) as life}
+        <div class="try-indicator"><span>&nbsp;</span></div>
+      {/each}
     </div>
     <Question
       question={$problems[0].question}
@@ -197,6 +214,9 @@
       userAnswer={userAnswer}
       answerSymbol={$problems[0]?.symbol}
     />
+    <div>
+      {$completedQuestions.length + 1} / {totalQuestions}
+    </div>
   {:else}
     <div>
       <h3>Sorry No More Tries Left</h3>

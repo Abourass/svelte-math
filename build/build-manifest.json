@@ -12,15 +12,15 @@
       "bytes": 420,
       "imports": []
     },
-    "_snowpack/pkg/common/index-ace5a4a7.js": {
-      "bytes": 9485,
+    "_snowpack/pkg/common/index-1b12f38e.js": {
+      "bytes": 9679,
       "imports": []
     },
     "_snowpack/pkg/svelte/internal.js": {
-      "bytes": 460,
+      "bytes": 479,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-ace5a4a7.js",
+          "path": "_snowpack/pkg/common/index-1b12f38e.js",
           "kind": "import-statement"
         }
       ]
@@ -29,20 +29,20 @@
       "bytes": 59,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-ace5a4a7.js",
+          "path": "_snowpack/pkg/common/index-1b12f38e.js",
           "kind": "import-statement"
         }
       ]
     },
     "dist/components/Quiz.svelte.css": {
-      "bytes": 965,
+      "bytes": 1240,
       "imports": []
     },
     "_snowpack/pkg/svelte/store.js": {
       "bytes": 1785,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-ace5a4a7.js",
+          "path": "_snowpack/pkg/common/index-1b12f38e.js",
           "kind": "import-statement"
         }
       ]
@@ -64,6 +64,10 @@
           "kind": "import-statement"
         }
       ]
+    },
+    "dist/modules/range.js": {
+      "bytes": 105,
+      "imports": []
     },
     "dist/modules/random.js": {
       "bytes": 253,
@@ -113,10 +117,6 @@
           "kind": "import-statement"
         }
       ]
-    },
-    "dist/modules/range.js": {
-      "bytes": 105,
-      "imports": []
     },
     "dist/problems/Factorial.js": {
       "bytes": 421,
@@ -175,7 +175,7 @@
       "imports": []
     },
     "dist/components/Quiz.svelte.js": {
-      "bytes": 10602,
+      "bytes": 12459,
       "imports": [
         {
           "path": "dist/components/Quiz.svelte.css",
@@ -191,6 +191,10 @@
         },
         {
           "path": "dist/stores/preferencesStore.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/modules/range.js",
           "kind": "import-statement"
         },
         {
@@ -308,8 +312,8 @@
         "dist/App.svelte.css": {
           "bytesInOutput": 0
         },
-        "_snowpack/pkg/common/index-ace5a4a7.js": {
-          "bytesInOutput": 3378
+        "_snowpack/pkg/common/index-1b12f38e.js": {
+          "bytesInOutput": 3441
         },
         "_snowpack/pkg/svelte/internal.js": {
           "bytesInOutput": 0
@@ -321,13 +325,16 @@
           "bytesInOutput": 0
         },
         "_snowpack/pkg/svelte/store.js": {
-          "bytesInOutput": 419
+          "bytesInOutput": 426
         },
         "dist/stores/historyStore.js": {
           "bytesInOutput": 48
         },
         "dist/stores/preferencesStore.js": {
           "bytesInOutput": 65
+        },
+        "dist/modules/range.js": {
+          "bytesInOutput": 45
         },
         "dist/modules/random.js": {
           "bytesInOutput": 83
@@ -347,9 +354,6 @@
         "dist/problems/Division.js": {
           "bytesInOutput": 249
         },
-        "dist/modules/range.js": {
-          "bytesInOutput": 45
-        },
         "dist/problems/Factorial.js": {
           "bytesInOutput": 202
         },
@@ -366,13 +370,13 @@
           "bytesInOutput": 1175
         },
         "_snowpack/pkg/izitoast.js": {
-          "bytesInOutput": 18706
+          "bytesInOutput": 18702
         },
         "dist/components/Quiz.svelte.js": {
-          "bytesInOutput": 3090
+          "bytesInOutput": 3755
         },
         "dist/App.svelte.js": {
-          "bytesInOutput": 710
+          "bytesInOutput": 711
         },
         "_snowpack/pkg/izitoast/dist/css/iziToast.min.css": {
           "bytesInOutput": 0
@@ -381,7 +385,7 @@
           "bytesInOutput": 64
         }
       },
-      "bytes": 30383
+      "bytes": 31115
     },
     "../~~bundle~~/dist/index.css": {
       "imports": [],
@@ -393,13 +397,13 @@
           "bytesInOutput": 417
         },
         "dist/components/Quiz.svelte.css": {
-          "bytesInOutput": 944
+          "bytesInOutput": 1216
         },
         "dist/components/Question.svelte.css": {
           "bytesInOutput": 487
         }
       },
-      "bytes": 43293
+      "bytes": 43565
     }
   }
 }
