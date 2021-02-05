@@ -212,7 +212,7 @@
       ]
     },
     "dist/components/Quiz.svelte.js": {
-      "bytes": 14746,
+      "bytes": 14553,
       "imports": [
         {
           "path": "dist/components/Quiz.svelte.css",
@@ -385,7 +385,7 @@
           "bytesInOutput": 412
         },
         "dist/components/Quiz.svelte.js": {
-          "bytesInOutput": 4474
+          "bytesInOutput": 4436
         },
         "dist/App.svelte.js": {
           "bytesInOutput": 712
@@ -397,7 +397,7 @@
           "bytesInOutput": 64
         }
       },
-      "bytes": 32274
+      "bytes": 32236
     },
     "../~~bundle~~/dist/index.css": {
       "imports": [],

@@ -14,6 +14,8 @@
   export let difficulty: questionDifficulty = 'easy';
   export let time;
 
+
+
   // Variables
   const triesLeft = writable(triesPerQuestion);
 
@@ -56,8 +58,6 @@
     $userAnswer = null
     questionsCorrect.update(n => n + 1);
     $triesLeft = triesPerQuestion
-
-    console.log({$completedQuestions})
   }
 
   const handleKeyboardCommands = (ev) => {
@@ -116,12 +116,14 @@
 <div class="card">
   {#if $completedQuestions.length === totalQuestions}
     <h3>Congratulations</h3>
-    {#each $totalQuestions as problem}
+    {#each $completedQuestions as problem, i}
+      <div class="slide-show" data-index={i}>
         <div class="column">
           <span>Problem: {problem.question}</span>
           <span>Answer: {problem.answer}</span>
           <span>Tries: {problem.tries}</span>
         </div>
+      </div>
     {/each}
   {:else}
     {#if $triesLeft >= 1}
