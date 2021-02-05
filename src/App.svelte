@@ -2,6 +2,8 @@
   import {onMount} from 'svelte';
   import Quiz from './components/Quiz.svelte';
   import {time} from './stores/historyStore';
+  import {numberOfQuestions} from './stores/preferencesStore';
+  import Config from './components/Config.svelte';
 
   onMount(() => {
     const interval = setInterval(() => time.update(t => t + 1), 1000);
@@ -29,7 +31,7 @@
   }
   .App-header {
     color: #d6d6d6;
-    min-height: 93vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,8 +41,14 @@
 </style>
 
 <div class="App">
+  <Config
+    numberOfQuestions={numberOfQuestions}
+  />
   <header class="App-header">
-    <Quiz time={time} />
+    <Quiz
+      time={time}
+      totalQuestions={$numberOfQuestions}
+    />
   </header>
 
   <footer>

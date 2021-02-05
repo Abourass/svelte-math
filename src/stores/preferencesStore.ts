@@ -6,3 +6,4 @@ export type QuestionAbbreviations = 'a'|'s'|'d'|'m'|'f'|'p'|'e';
 
 export const problemCategories: Writable<Array<QuestionAbbreviations>> = writable(["a", "s", "s", "d", "d", "d", "m", "m", "f", "p", "e"])
 export const problems: Writable<Array<iProblem>> = writable([]);
+export const numberOfQuestions = writable(10);

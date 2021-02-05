@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4449bf23-3432-442e-b578-b28f856603b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Modal.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/modalStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/build-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/dist/components/Config.svelte.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/dist/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/dist/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/dist/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/Problem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Problem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Config.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Config.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Quiz.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/preferencesStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/preferencesStore.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +27,7 @@
         <option value="Question" />
         <option value="Quiz" />
         <option value="Config" />
+        <option value="Modal" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -107,7 +116,12 @@
       <workItem from="1612462184868" duration="12755000" />
       <workItem from="1612478543233" duration="8095000" />
       <workItem from="1612490954567" duration="1819000" />
-      <workItem from="1612498813437" duration="3414000" />
+      <workItem from="1612498813437" duration="3452000" />
+      <workItem from="1612544846588" duration="568000" />
+      <workItem from="1612546102617" duration="593000" />
+      <workItem from="1612546868736" duration="2112000" />
+      <workItem from="1612555147817" duration="2823000" />
+      <workItem from="1612561535628" duration="5088000" />
     </task>
     <task id="LOCAL-00001" summary=":sparkles: Adding local site">
       <created>1612475545913</created>
@@ -179,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612492775630</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary=":bug: Fixed issue preventing finish screen">
+      <created>1612504488667</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1612504488667</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +217,8 @@
     <MESSAGE value=":art: We now track tries per question / time spent per question" />
     <MESSAGE value=":art: We now show how many tries left" />
     <MESSAGE value=":sparkles: Now has a completion screen" />
-    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: Now has a completion screen" />
+    <MESSAGE value=":bug: Fixed issue preventing finish screen" />
+    <option name="LAST_COMMIT_MESSAGE" value=":bug: Fixed issue preventing finish screen" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

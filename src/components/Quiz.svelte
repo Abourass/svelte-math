@@ -14,11 +14,10 @@
   export let difficulty: questionDifficulty = 'easy';
   export let time;
 
-
-
   // Variables
   const triesLeft = writable(triesPerQuestion);
 
+  // Quiz Functions
   const restart = () => {
     $problems = [...problemGenerator(totalQuestions, $problemCategories, difficulty, true)];
     $triesLeft = triesPerQuestion;
@@ -27,7 +26,6 @@
     $time = 0;
   }
 
-  // Quiz Functions
   const wrong = () => {
     iziToast.error({
       title: 'Incorrect',

@@ -6,11 +6,7 @@ export interface iProblem {
   symbol?: string
 }
 
-export interface digits {
-  digitA: number,
-  digitB: number
-}
-
+export interface digits { digitA: number, digitB: number }
 export type questionDifficulty = 'easy'|'medium'|'hard'
 
 export default abstract class Problem {
