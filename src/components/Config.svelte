@@ -1,8 +1,10 @@
 <script lang="ts">
   import Modal from './Modal.svelte';
+  import Preference from './Preference.svelte';
 
   // Props
   export let numberOfQuestions;
+  export let triesPerQuestion;
 </script>
 
 <style>
@@ -41,10 +43,14 @@
 
   <div slot="content" class="wide">
     <div class="row">
-      <div class="preference-container">
-        <label for="numberOfQuestions">Number of Questions</label>
-        <input bind:value={$numberOfQuestions} id="numberOfQuestions">
-      </div>
+      <Preference
+        preference={numberOfQuestions}
+        label="Number of Questions"
+      />
+      <Preference
+        preference={triesPerQuestion}
+        label="Tries Per Question"
+      />
     </div>
 
   </div>

@@ -2,7 +2,7 @@
   import {onMount} from 'svelte';
   import Quiz from './components/Quiz.svelte';
   import {time} from './stores/historyStore';
-  import {numberOfQuestions} from './stores/preferencesStore';
+  import {numberOfQuestions, triesPerQuestion} from './stores/preferencesStore';
   import Config from './components/Config.svelte';
 
   onMount(() => {
@@ -43,11 +43,13 @@
 <div class="App">
   <Config
     numberOfQuestions={numberOfQuestions}
+    triesPerQuestion={triesPerQuestion}
   />
   <header class="App-header">
     <Quiz
       time={time}
       totalQuestions={$numberOfQuestions}
+      triesPerQuestion={$triesPerQuestion}
     />
   </header>
 

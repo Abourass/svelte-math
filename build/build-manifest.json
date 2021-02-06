@@ -12,15 +12,15 @@
       "bytes": 420,
       "imports": []
     },
-    "_snowpack/pkg/common/index-15c782b6.js": {
-      "bytes": 11412,
+    "_snowpack/pkg/common/index-ac3818bd.js": {
+      "bytes": 11499,
       "imports": []
     },
     "_snowpack/pkg/svelte/internal.js": {
-      "bytes": 582,
+      "bytes": 598,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-15c782b6.js",
+          "path": "_snowpack/pkg/common/index-ac3818bd.js",
           "kind": "import-statement"
         }
       ]
@@ -29,7 +29,7 @@
       "bytes": 59,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-15c782b6.js",
+          "path": "_snowpack/pkg/common/index-ac3818bd.js",
           "kind": "import-statement"
         }
       ]
@@ -42,7 +42,7 @@
       "bytes": 1785,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-15c782b6.js",
+          "path": "_snowpack/pkg/common/index-ac3818bd.js",
           "kind": "import-statement"
         }
       ]
@@ -57,7 +57,7 @@
       ]
     },
     "dist/stores/preferencesStore.js": {
-      "bytes": 247,
+      "bytes": 292,
       "imports": [
         {
           "path": "_snowpack/pkg/svelte/store.js",
@@ -286,8 +286,17 @@
         }
       ]
     },
+    "dist/components/Preference.svelte.js": {
+      "bytes": 2927,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
     "dist/components/Config.svelte.js": {
-      "bytes": 5975,
+      "bytes": 6134,
       "imports": [
         {
           "path": "dist/components/Config.svelte.css",
@@ -300,11 +309,15 @@
         {
           "path": "dist/components/Modal.svelte.js",
           "kind": "import-statement"
+        },
+        {
+          "path": "dist/components/Preference.svelte.js",
+          "kind": "import-statement"
         }
       ]
     },
     "dist/App.svelte.js": {
-      "bytes": 3001,
+      "bytes": 3345,
       "imports": [
         {
           "path": "dist/App.svelte.css",
@@ -380,8 +393,8 @@
         "dist/App.svelte.css": {
           "bytesInOutput": 0
         },
-        "_snowpack/pkg/common/index-15c782b6.js": {
-          "bytesInOutput": 4019
+        "_snowpack/pkg/common/index-ac3818bd.js": {
+          "bytesInOutput": 4055
         },
         "_snowpack/pkg/svelte/internal.js": {
           "bytesInOutput": 0
@@ -399,10 +412,10 @@
           "bytesInOutput": 48
         },
         "dist/stores/preferencesStore.js": {
-          "bytesInOutput": 74
+          "bytesInOutput": 82
         },
         "dist/modules/range.js": {
-          "bytesInOutput": 45
+          "bytesInOutput": 46
         },
         "dist/components/Question.svelte.css": {
           "bytesInOutput": 0
@@ -435,16 +448,16 @@
           "bytesInOutput": 352
         },
         "dist/problems/Factorial.js": {
-          "bytesInOutput": 202
+          "bytesInOutput": 203
         },
         "dist/problems/Exponent.js": {
-          "bytesInOutput": 295
+          "bytesInOutput": 297
         },
         "dist/modules/problemGenerator.js": {
           "bytesInOutput": 412
         },
         "dist/components/Quiz.svelte.js": {
-          "bytesInOutput": 4435
+          "bytesInOutput": 4436
         },
         "dist/components/Config.svelte.css": {
           "bytesInOutput": 0
@@ -458,11 +471,14 @@
         "dist/components/Modal.svelte.js": {
           "bytesInOutput": 2796
         },
+        "dist/components/Preference.svelte.js": {
+          "bytesInOutput": 854
+        },
         "dist/components/Config.svelte.js": {
-          "bytesInOutput": 2026
+          "bytesInOutput": 2123
         },
         "dist/App.svelte.js": {
-          "bytesInOutput": 933
+          "bytesInOutput": 1028
         },
         "_snowpack/pkg/izitoast/dist/css/iziToast.min.css": {
           "bytesInOutput": 0
@@ -471,7 +487,7 @@
           "bytesInOutput": 64
         }
       },
-      "bytes": 37950
+      "bytes": 39045
     },
     "../~~bundle~~/dist/index.css": {
       "imports": [],
